@@ -1,16 +1,34 @@
 package com.yash.model;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Embeddable
+@Entity
+@Table
 public class Address {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int addressId;
 	private String address1;
 	private String address2;
 	private String city;
 	private String state;
+	@Column
 	private int pin;
 	private String country;
+
+	public int getAddressId() {
+		return addressId;
+	}
+
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
+	}
 
 	public String getAddress1() {
 		return address1;
