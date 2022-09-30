@@ -1,0 +1,48 @@
+ <body>
+    <div >
+<form [formGroup]="studentform" (ngSubmit)="onSubmit()">
+
+<div class="col-sm-76">
+<label  class="col-sm-2 col-form-label"><b>Student Name: </b></label>
+<input type="text" placeholder="name" formControlName="sname" [pattern]="namepattern">
+<div style="color: red;" *ngIf="studentform.controls['sname'].touched && studentform.controls['sname'].invalid">
+    <span *ngIf="studentform.controls['sname'].hasError('required')">name is required</span>
+    <span *ngIf="studentform.controls['sname'].hasError('pattern')">only alphabate with
+        space between 2 to 20 charecters
+    </span>
+</div>
+</div><br>
+
+<div>
+<label for="address"><b>Student address: </b></label>
+<input type="text" placeholder="address" formControlName="address" required>
+<div *ngIf="studentform.controls['address'].touched && studentform.controls['address'].invalid">
+    <span *ngIf="studentform.controls['address'].hasError('required')">address is required</span>
+</div>
+</div><br>
+
+<div>
+<label for="mobno"><b>Student mobno: </b></label>
+<input type="text" placeholder="mobile no" formControlName="mobno" required>
+<div *ngIf="studentform.controls['mobno'].touched && studentform.controls['mobno'].invalid">
+    <span *ngIf="studentform.controls['mobno'].hasError('required')">mobile no is required</span>
+    <span *ngIf="studentform.controls['mobno'].getError?.length">use 10 digit mob no</span>
+</div>
+</div><br>
+
+<div>
+<label for="email"><b>Student email: </b></label>
+<input type="text" placeholder="email" formControlName="email" [pattern]="emailpattern" required>
+<div *ngIf="studentform.controls['email'].touched && studentform.controls['email'].invalid">
+    <span *ngIf="studentform.controls['email'].hasError('required')">email is required</span>
+    <span *ngIf="studentform.controls['email'].hasError('pattern')">inavlid email</span>
+</div>
+</div><br>
+
+<div>
+<input type="submit" value="submit">
+</div>
+</form>
+
+</div>
+</body> 

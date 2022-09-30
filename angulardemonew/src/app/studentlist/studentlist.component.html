@@ -1,0 +1,36 @@
+<br>
+<br>
+<table border="1">
+
+    <tr>
+
+        <td>Student Id</td>
+
+        <td>Student Name</td>
+
+        <td>Student Address</td>
+
+        <td>Student mobilemo</td>
+
+        <td>Student email</td>
+        
+        <td>Delete</td>
+    </tr>
+
+    <tr  *ngFor = "let e of stu">
+
+        <td>{{e.sid}}</td>
+
+        <td>{{e.sname}}</td>
+
+        <td>{{e.address}}</td>
+
+        <td>{{e.mobno}}</td>
+
+        <td>{{e.email}}</td>
+
+        <td><button (click)="deleteDataById(e.sid)" class="btn btn-primary btn-lg" id="submitbtn" name="submit">Delete</button></td>
+
+    </tr>
+
+</table>
