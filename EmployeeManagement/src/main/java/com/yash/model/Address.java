@@ -1,6 +1,5 @@
 package com.yash.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,8 +17,8 @@ public class Address {
 	private String address2;
 	private String city;
 	private String state;
-	@Column
-	private int pin;
+	//@Column
+	//private int pin;
 	private String country;
 
 	public int getAddressId() {
@@ -62,13 +61,11 @@ public class Address {
 		this.state = state;
 	}
 
-	public int getPin() {
-		return pin;
-	}
-
-	public void setPin(int pin) {
-		this.pin = pin;
-	}
+	/*
+	 * public int getPin() { return pin; }
+	 * 
+	 * public void setPin(int pin) { this.pin = pin; }
+	 */
 
 	public String getCountry() {
 		return country;
