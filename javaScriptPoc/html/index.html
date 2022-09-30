@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+	body {
+		text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+	<h2>
+		Program to
+		get the website URL:
+	</h2>
+		<button onclick="GetURL()"> Get URL </button>
+	<p id="url"></p>
+
+	
+	<script>
+	function GetURL() {
+		var gfg = document.URL;
+		document.getElementById("url").innerHTML = gfg;
+	}
+	</script>
+</body>
+
+</html>

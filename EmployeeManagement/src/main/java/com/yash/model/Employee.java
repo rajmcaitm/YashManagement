@@ -1,9 +1,13 @@
 package com.yash.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -11,11 +15,14 @@ import javax.persistence.Table;
 public class Employee {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.AUTO)  
+	@PrimaryKeyJoinColumn
 	private int empId;
 	private String empName;
 	private int empAge;
 	private long empMobileNo;
+	@OneToOne(targetEntity=Address.class,cascade=CascadeType.ALL) 
+	@JoinColumn(name = "address_id")
 	private Address empAddress;
 	private double empSalary;
 
