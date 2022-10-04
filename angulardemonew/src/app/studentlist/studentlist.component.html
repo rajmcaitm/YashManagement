@@ -10,11 +10,12 @@
 
         <td>Student Address</td>
 
-        <td>Student mobilemo</td>
+        <td>Student MobileNo</td>
 
-        <td>Student email</td>
+        <td>Student Email</td>
         
         <td>Delete</td>
+        <td>Update</td>
     </tr>
 
     <tr  *ngFor = "let e of stu">
@@ -31,6 +32,7 @@
 
         <td><button (click)="deleteDataById(e.sid)" class="btn btn-primary btn-lg" id="submitbtn" name="submit">Delete</button></td>
 
+        <td><button (click)="getStudentById(e.sid)" class="btn btn-primary btn-lg" id="submitbtn" name="submit">Update</button></td>
     </tr>
 
 </table>

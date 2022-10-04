@@ -24,6 +24,16 @@ export class ServiceService {
  {
      return this.http.delete(this.url+"/deletedata/"+sid);
  }
+ getPerticularStudentData(sid:number)
+ {
+     return this.http.get(this.url+"/getstudent/"+sid);
+ }
 
+
+ updateStudent(student:StudentForm)
+ {
+  console.log(student);
+     return this.http.put<StudentForm>(this.url+"/updatedata/", student);
+ }
 
 }

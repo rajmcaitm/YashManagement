@@ -45,6 +45,11 @@ public class StudentForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public StudentForm() {
+		super();
+	}
+	
+	
 	
 	
 }
