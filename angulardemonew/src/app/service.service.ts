@@ -26,7 +26,7 @@ export class ServiceService {
  }
  getPerticularStudentData(sid:number)
  {
-     return this.http.get(this.url+"/getstudent/"+sid);
+     return this.http.get(this.url+"/updatedata/"+sid);
  }
 
 
