@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentForm } from '../model/student-form';
 import { ServiceService } from '../service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-studentlist',
@@ -9,7 +10,7 @@ import { ServiceService } from '../service.service';
 })
 export class StudentlistComponent implements OnInit {
 
-  constructor(private cs:ServiceService) { }
+  constructor(private cs:ServiceService,private route:Router) { }
 
   stu!:StudentForm[];
 
@@ -27,5 +28,10 @@ export class StudentlistComponent implements OnInit {
   console.log(data);
   window.location.reload();
 })
+  }
+
+  getStudentById(sid :number)
+  {
+    this.route.navigate(['/student/'+sid])
   }
 }
