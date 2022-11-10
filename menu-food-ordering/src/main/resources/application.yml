@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: menu-food-ordering
+
+eureka:
+  instance:
+    hostname: localhost
