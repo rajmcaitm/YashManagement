@@ -1,0 +1,30 @@
+server:
+  port: 8084
+
+eureka:
+  instance:
+    hostname: localhost
+
+
+spring:
+  application:
+    name: food-apigateway
+  cloud:
+    gateway:
+      routes:
+        - id: food-ordering
+          uri: lb://food-ordering
+          predicates:
+            - Path=/contact/**,/login/**,/xx,/api/**,/register,/checkUserName,/cart,/changeDB,/addToCart,/addNewItem,/addNewItemUrl,/checkItemId,/menu
+        - id: contact-food-ordering
+          uri: lb://contact-food-ordering
+          predicates:
+            - Path=/contact/**
+        - id: login-food-ordering
+          uri: lb://login-food-ordering
+          predicates:
+            - Path=/login/**,/xx,/api/**,/register,/checkUserName
+        - id: menu-food-ordering
+          uri: lb://menu-food-ordering
+          predicates:
+            - Path=/cart,/changeDB,/addToCart,/addNewItem,/addNewItemUrl,/checkItemId,/menu     

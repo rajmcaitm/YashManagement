@@ -3,7 +3,7 @@ package com.yash.Java8;
 import java.util.ArrayList;
 
 class Java8 {
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 
 		list.add(10);
