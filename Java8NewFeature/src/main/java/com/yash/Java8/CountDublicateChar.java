@@ -7,6 +7,11 @@ public class CountDublicateChar {
 
 	public static void main(String[] args) {
 		String str = "aaabbccccd";
+		System.out.println(printDublicateChar(str)); // {a=3, b=2, c=4, d=1}
+
+	}
+
+	public static Map<Character, Integer> printDublicateChar(String str) {
 		Map<Character, Integer> charMap = new HashMap<Character, Integer>();
 		char[] arr = str.toCharArray();
 
@@ -20,9 +25,8 @@ public class CountDublicateChar {
 					charMap.put(arr[i], 1);
 				}
 			}
+
 		}
-
-		System.out.println(charMap);//{a=3, b=2, c=4, d=1}
+		return charMap;
 	}
-
 }
