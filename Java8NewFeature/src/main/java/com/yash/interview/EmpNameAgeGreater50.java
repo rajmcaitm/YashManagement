@@ -1,12 +1,8 @@
 package com.yash.interview;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import com.yash.collector.Student;
 
 public class EmpNameAgeGreater50 {
 
@@ -29,17 +25,12 @@ public class EmpNameAgeGreater50 {
 
 	public static List<String> printNameWhoseAgeGreaterThenList50(List<Employee> empList) {
 
-		List<String> resultList = empList
-				.stream()
-				.filter(list->list.getAge() > 50)
-				.collect(Collectors::toString);
-				
+		List<String> listOfEmp = empList.stream()
+				.filter(list -> list.getAge() > 50)
+				.map(ename -> ename.displayEmpName())
+				.collect(Collectors.toList());
 		
-		empList.stream().filter(emp->emp.getSalary() > 10000).forEach(System.out::println);
-		
-		
-		
-		return resultList;
+		return listOfEmp;
 
 	}
 
