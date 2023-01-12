@@ -18,8 +18,6 @@ public class TestInterface implements A, B {
 	
 	
 	public static void main(String[] args) {
-		A a  = new A();
-		B b = new B();
 		TestInterface test = new TestInterface();
 		test.display();//interface A method will called
 		
