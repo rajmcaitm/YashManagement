@@ -6,13 +6,13 @@ public class OddEven {
 
 		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] % 2 == 0) {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				System.out.println("Dharm Raj Chaudhary");
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			} else {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				System.out.println("Mahima Patel");
-				Thread.sleep(1000);
+				Thread.sleep(100);
 
 			}
 		}
