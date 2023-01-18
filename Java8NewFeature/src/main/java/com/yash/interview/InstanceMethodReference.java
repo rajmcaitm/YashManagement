@@ -17,6 +17,7 @@ public class InstanceMethodReference {
 		Talking talk1 = instanceMethodReference::saySomething;
 		talk1.say();
 
+		//using anamouse 
 		Talking talk2 = new InstanceMethodReference()::saySomething;
 		talk2.say();
 	}
