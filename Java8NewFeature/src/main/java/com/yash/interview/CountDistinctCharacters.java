@@ -9,7 +9,7 @@ public class CountDistinctCharacters {
 		String name = "aaryanna";
 		String test = "aayanna";
 
-		System.err.println(name + ": has " + countDisChar(name) + " distinct characters");// has 4 distinct characters.
+		System.err.println(name + ": has " + countDisChar(name) + " distinct characters");
 		System.err.println(test + ": has " + countDisChar(test) + " distinct characters");
 	}
 
