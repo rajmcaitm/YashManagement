@@ -13,7 +13,9 @@ header {
 }
 
 header img {
-    max-width: 400px;
+    /* max-width: 200px; */
+    max-width: 500px;
+    height: 200px;
 }
 
 /* Navigation Styles */
