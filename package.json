@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "-": "^0.0.1",
-    "@angular/cli": "^18.1.0",
+    "@angular/cli": "^19.0.0",
     "g": "^2.0.1"
   }
 }
